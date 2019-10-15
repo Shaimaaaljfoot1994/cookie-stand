@@ -1,0 +1,22 @@
+
+th {
+    background-color: rgb(197, 16, 143);
+    border-style: solid;
+    color: rgb(8, 54, 10);
+    border-width: 1px 1px 1px 1px;
+}
+
+td {
+    border-style:solid ;
+    color: rgb(221, 17, 102);
+    border-width: 1px 1px 1px 1px;
+}
+table{
+    border-style: solid;
+    }
+
+tr {
+
+    color: rgb(204, 175, 12);
+    border-style: solid;
+}

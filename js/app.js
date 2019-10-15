@@ -419,4 +419,33 @@ var totaloftotal = document.createElement('td');
 dRow.appendChild(totaloftotal);
 totaloftotal.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
 
-// numberofcookiesperhour
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
