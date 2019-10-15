@@ -319,11 +319,11 @@ function shops(shoplocation, min, max, avg) {
     this.avg = avg;
 
     this.total = 0;
-    this.randomnumber = 0;
-    this.numberofcookiesperhour = [];
+    this.random = 0;
+    this.numberofhour = [];
 
 };
-var numberofcookiesperhour = [];
+var numberofhour = [];
 
 var seattle = new shops('seattle', 23, 65, 6.3);
 var tokyo = new shops('tokyo', 3, 24, 1.2);
@@ -334,8 +334,9 @@ var locationsnames = [seattle, tokyo, dubai, paris, lima];
 shops.prototype.randomInRange = function () {
     var range = this.max - this.min;
     var rand = (Math.random() * range) + this.min;
-    var randomnumber = Math.ceil(rand);
-    return randomnumber;
+    var random = Math.ceil(rand);
+    return random;
+   
 };
 
 
@@ -343,7 +344,7 @@ shops.prototype.calculatenumberofcookies = function () {
     for (var i = 0; i < 14; i++) {
         var result1 = this.randomInRange(this.min, this.max);
         var cookiespurchased1 = Math.ceil(this.avg * result1);
-        this.numberofcookiesperhour.push(cookiespurchased1);
+        this.numberofhour.push(cookiespurchased1);
         this.total += cookiespurchased1;
     }
 }
@@ -357,7 +358,7 @@ for (var i = 0; i < locationsnames.length; i++) {
 
 
 
-console.log('Seattle', numberofcookiesperhour);
+console.log('Seattle', numberofhour);
 
 
 var contentArea = document.getElementById('content-area');
@@ -375,26 +376,26 @@ for (var i = 0; i < hours.length; i++) {
     headerRow.appendChild(hoursstring);
     hoursstring.textContent = hours[i];
 };
-var totalcookiesperlocation = document.createElement('th');
-headerRow.appendChild(totalcookiesperlocation);
-totalcookiesperlocation.textContent = 'Daily Location Total';
+var totalcookieslocation = document.createElement('th');
+headerRow.appendChild(totalcookieslocation);
+totalcookieslocation.textContent = 'Daily Location Total';
 
 shops.prototype.table = function () {
-    var dataRow = document.createElement('tr');
-    table.appendChild(dataRow);
+    var dRow = document.createElement('tr');
+    table.appendChild(dRow);
 
     var shoplocationNames = document.createElement('th');
-    dataRow.appendChild(shoplocationNames);
+    dRow.appendChild(shoplocationNames);
     shoplocationNames.textContent = this.shoplocation;
 
-    for (var i = 0; i < this.numberofcookiesperhour.length; i++) {
+    for (var i = 0; i < this.numberofhour.length; i++) {
 
-        var cookiesperhour = document.createElement('td');
-        dataRow.appendChild(cookiesperhour);
-        cookiesperhour.textContent = this.numberofcookiesperhour[i];
+        var hour = document.createElement('td');
+        dRow.appendChild(hour);
+        hour.textContent = this.numberofhour[i];
     }
     var totalcookies = document.createElement('td');
-    dataRow.appendChild(totalcookies);
+    dRow.appendChild(totalcookies);
     totalcookies.textContent = this.total;
 };
 for (var i = 0; i < locationsnames.length; i++) {
@@ -402,19 +403,20 @@ for (var i = 0; i < locationsnames.length; i++) {
     this.locationsnames[i].table();
 
 }
-var dataRow = document.createElement('tr');
-table.appendChild(dataRow);
-var totalsperhour = document.createElement('td');
-dataRow.appendChild(totalsperhour);
-totalsperhour.textContent = 'Totals';
+var dRow = document.createElement('tr');
+table.appendChild(dRow);
+var totalshour = document.createElement('td');
+dRow.appendChild(totalshour);
+totalshour.textContent = 'Totals';
 for (var i = 0; i < 14; i++) {
-    var totalsperhours = document.createElement('td');
-    dataRow.appendChild(totalsperhours);
-    totalsperhours.textContent = seattle.numberofcookiesperhour[i] + tokyo.numberofcookiesperhour[i] + dubai.numberofcookiesperhour[i] + paris.numberofcookiesperhour[i] + lima.numberofcookiesperhour[i];
+    var totalshours = document.createElement('td');
+    dRow.appendChild(totalshours);
+    totalshours.textContent = seattle.numberofhour[i] + tokyo.numberofhour[i] + dubai.numberofhour[i] + paris.numberofhour[i] + lima.numberofhour[i];
 
 
 }
 var totaloftotal = document.createElement('td');
-dataRow.appendChild(totaloftotal);
+dRow.appendChild(totaloftotal);
 totaloftotal.textContent = seattle.total + tokyo.total + dubai.total + paris.total + lima.total;
 
+// numberofcookiesperhour
