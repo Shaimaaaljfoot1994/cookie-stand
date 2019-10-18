@@ -135,3 +135,10 @@ function submitHandler(event) {
 };
 var cookieform = document.getElementById("Addcookielocation");
 cookieform.addEventListener('submit', submitHandler);
+
+
+
+
+
+
+
