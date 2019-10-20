@@ -1,15 +1,15 @@
-'use strict';
-var footerRow ;
+'use strict'
+var footerRow;
 
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-function Cookieshop(location, min, max, avg) {
-    this.location = location;
+function Cookieshop(shoplocation, min, max, avg) {
+    this.shoplocation = shoplocation;
     this.min = min;
     this.max = max;
     this.avg = avg;
     this.total = 0;
     this.numberofcookiesperhour = [];
-  
+    // this.calculatenumberofcookies ();
 
 };
 var locationsnames = [];
@@ -57,16 +57,16 @@ function renderHeaderRow(table) {
     }
     var totalcookiesperlocation = document.createElement('th');
     headerRow.appendChild(totalcookiesperlocation);
-    totalcookiesperlocation.textContent = 'Daily location Total';
+    totalcookiesperlocation.textContent = 'Daily Location Total';
 }
 renderHeaderRow(cookietable);
-Cookieshop.prototype.renderDataRows = function (table) {
+Cookieshop.prototype.renderDataRows = function () {
     var dataRow = document.createElement('tr');
     cookietable.appendChild(dataRow);
 
-    var locationNames = document.createElement('th');
-    dataRow.appendChild(locationNames);
-    locationNames.textContent = this.location;
+    var shoplocationNames = document.createElement('th');
+    dataRow.appendChild(shoplocationNames);
+    shoplocationNames.textContent = this.shoplocation;
 
     for (var i = 0; i < this.numberofcookiesperhour.length; i++) {
 
@@ -117,28 +117,21 @@ renderfooterRows(cookietable);
 
 function submitHandler(event) {
     event.preventDefault();
-    var location = event.target.location.value;
-    console.log('location', location);
+    var shoplocation = event.target.shoplocation.value;
+    console.log('shoplocation', shoplocation);
     var min = parseInt(event.target.min.value);
     console.log('min', min);
     var max =parseInt (event.target.max.value);
     console.log('max', max);
     var avg = parseFloat(event.target.avg.value);
     console.log('avg', avg);
-    var location = new Cookieshop(location, min, max, avg);
-    console.log('location', location)
-    location.calculatenumberofcookies();
-    locationsnames.push(location);
+    var newlocation = new Cookieshop(shoplocation, min, max, avg);
+    console.log('new location', newlocation)
+    newlocation.calculatenumberofcookies();
+    locationsnames.push(newlocation);
    cookietable.removeChild(footerRow);
-    location.renderDataRows();
+    newlocation.renderDataRows();
     renderfooterRows(cookietable);
 };
-var cookieform = document.getElementById("Addcookielocation");
-cookieform.addEventListener('submit', submitHandler);
-
-
-
-
-
-
-
+var newcookieform = document.getElementById("Addcookieshoplocation");
+newcookieform.addEventListener('submit', submitHandler);
