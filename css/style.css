@@ -1,4 +1,4 @@
-th {
+/* th {
     background-color: rgb(197, 16, 143);
     border-style: solid;
     color: rgb(8, 54, 10);
@@ -19,3 +19,235 @@ tr {
     color: rgb(204, 175, 12);
     border-style: solid;
 }
+
+
+body{
+    background-color:lightgray;  
+}
+tr:hover {background-color:#9b8f8f;} 
+
+table {
+    border-collapse: collapse;
+    font-family:Helvetica;
+  }
+  
+  table, td, th {
+    border: 1px solid black;
+    text-align: left;
+  }
+  th, td {
+    padding: 15px;
+  }
+  th {
+    background-color: rgb(224, 198, 198);
+    color: rgb(14, 119, 110);
+  }
+  input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+ button[type=submit] {
+     font-size:30px;
+    width: 100%;
+    background-color: rgb(198, 228, 199);
+    color: rgb(59, 7, 7)
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type=submit]:hover {
+    background-color: #f195ce;
+  }
+  
+  div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+ header  img {
+    float: right;
+  }
+  img {
+      margin-right: 250px;;
+  }
+  footer {
+      margin-left: 150px;
+  } */
+
+  body {
+    background-color: BurlyWood;
+    background-image: url('img/seattle_pic.jpg');
+    background-repeat: no-repeat;
+    background-size: 1440px 800px;
+    background-attachment: fixed;
+  }
+  
+  h1 {
+    width: 45%;
+    /*position: sticky;
+    top: 0;*/
+    margin-right: auto;
+    text-align: left;
+    text-decoration: underline;
+    font-size: 2.5em;
+    color: #FFF;
+    text-shadow: 2px 2px Black;
+  }
+  
+  h3 {
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 2em;
+    color: #FFF;
+  }
+  
+  ul {
+    width: 15%;
+    margin-top: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px double #FFF;
+  }
+  
+  li {
+    text-align: left;
+    font-family: Verdana; /*standard sans-serif font for data*/
+    font-weight: bold;
+    color: #FFF;
+    padding: 5px;
+  }
+  
+  table {
+    border: 1px solid #FFF;
+    border-radius: 3px;
+    table-layout: fixed;
+    width: 77%;
+  }
+  
+  th {
+    border: 1px solid #FFF;
+    text-align: center;
+    word-wrap: break-word;
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #FFF;
+    text-shadow: 1px 1px Black;
+  }
+  
+  td {
+    border: 1px solid #FFF;
+    text-align: center;
+    word-wrap: break-word;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 3px;
+    text-shadow: 1px 1px Black;
+  }
+  
+  #footer-header, #header-corner {
+    font-style: italic;
+  }
+  
+  th:hover {
+    color: Black;
+    background-color: Gray;
+    cursor: default;
+  }
+  
+  td:hover {
+    color: Black;
+    background-color: Gray;
+    cursor: default;
+  }
+  
+  .text {
+    font-family: Georgia;
+    color: #FFF;
+    font-weight: bold;
+  }
+  
+  fieldset{
+    margin-top: 1em;
+    width: 50%;
+    border: 2px solid #FFF;
+  }
+  
+  legend {
+    border: 1px solid Black;
+    border-radius: 5px;
+    font-style: italic;
+    font-weight: bold;
+    background-color: LightGrey;
+    font-size: 1em;
+    padding: 1.2%;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #FFF;
+    font-size: 1.1em;
+  }
+  
+  input {
+    margin: 1.5em;
+    border: 1px solid Black;
+  }
+  
+  #location, #minimum, #maximum, #average {
+    box-shadow: inset 1px 1px Grey;
+    padding: 0.5%;
+  }
+  
+  #submit {
+    width: 20%;
+    height: 20%;
+    padding: 1.2%;
+    background-color: Blue;
+    color: #FFF;
+    border: 1px solid Black;
+    border-radius: 5px;
+    margin-left: 0;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-shadow: 1px 1px Black;
+    box-shadow: 1px 1px 4px LightGrey, inset 2px 2px 2px LightGrey;
+    cursor: pointer;
+  }
+  #submit:hover {
+    -webkit-transform: scale(1.1);
+  }
+  #submit:active {
+    -webkit-transform: translate3D(3px, 3px, 6px);
+  }
+  
+  button {
+    margin-right: 3em;
+    text-align: center;
+    float: right;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px LightGrey, inset 2px 2px 2px LightGrey;
+    background-color: Navy;
+    color: #FFF;
+    position: relative;
+    bottom: 3em;
+    font-size: 0.9em;
+  }
+  button:hover {
+    cursor: pointer;
+  }
+  button:active {
+    -webkit-transform: translate3D(3px, 3px, 6px);
+  }

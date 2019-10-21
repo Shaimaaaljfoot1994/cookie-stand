@@ -1,0 +1,301 @@
+/*   
+body {
+    background-color: #FFF;
+  }
+  
+  header {
+    width: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Dancing Script';
+    background-color: Salmon;
+    color: #FFF;
+  }
+  a {
+    text-decoration: none;
+    color: Black;
+  }
+  #left_pic {
+    float: left;
+  }
+  #right_pic {
+    float: right;
+  }
+  
+  div {
+    display: inline;
+    margin-left: 1em;
+    margin-right: 1em;
+    text-align: center;
+  }
+  figure {
+    display: inline-block;
+    text-align: center;
+    width: 15%;
+  }
+  img {
+    display: inline;
+    width: 15%;
+    height: 5%;
+    margin: auto;
+   }
+  figcaption {
+    display: inline;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .pic {
+    width: 176px;
+    height: 176px;
+    border: 4px solid Salmon;
+    border-radius: 5px;
+  }
+  
+  
+  #merch {
+    margin: auto;
+    background-color: BurlyWood;
+    padding: 2% 0 2% 0;
+    text-align: center;
+  }
+  
+  p {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.2em;
+    color: Black;
+  }
+  
+  #home-fish {
+    margin-top: 60%;
+    margin-bottom: 0;
+    width: 110px;
+    height: 50px;
+    box-shadow: 1px 1px 4px Black;
+  }
+  #home-fish:active {
+    -webkit-transform: translate3D(3px, 3px, 6px);
+  }
+  #home_again figcaption {
+    font-size: 1em;
+  }
+  
+  footer {
+    background-color: Salmon;
+    width: auto;
+    margin: auto;
+    padding: 1.5%;
+    text-align: center;
+  }
+  
+  .text {
+    font-family: Georgia serif; /* standard serif font for text*/
+    /* color: Black;
+  } */ */
+
+
+  body {
+    background-color: #FFF;
+  }
+  
+  header {
+    width: auto;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 20px;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Dancing Script';
+    background-color: Salmon;
+    color: #FFF;
+  }
+  #header_link {
+    text-decoration: none;
+    color: #FFF;
+  }
+  
+  .nav-bar {
+    display: inline-flex;
+    margin: 0 auto;
+    color: Aqua;
+    font-size: 0.3em;
+    font-family: 'Roboto';
+    font-weight: bold;
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: Aqua;
+    width: auto;
+    height: auto;
+    margin: 0 1em;
+  }
+  
+  li {
+    border: 1px solid #FFF;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .link {
+    display: block;
+    height: 242px;
+    margin-top: -242px;
+    visibility: hidden;
+  }
+  
+  #slogan {
+    width: 50%;
+    position: relative;
+    bottom: 110px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.7em;
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  img {
+     display: inline;
+     width: 15%;
+     height: 5%;
+     margin: auto;
+   }
+  
+  #left_pic {
+    float: left;
+  }
+  #right_pic {
+    float: right;
+  }
+  
+  #photo_div {
+    margin: auto;
+    background-image: url('img/salmon_pastry.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 15%;
+  }
+  
+  #about_div {
+    margin: auto;
+    background-color: #FFF;
+    padding-bottom: 4%;
+    text-align: center;
+  }
+  #location_div {
+    margin: auto;
+    background-color: BurlyWood;
+    padding: 3%;
+    text-align: center;
+  }
+  #hours_div {
+    margin: auto;
+    background-color: #FFF;
+    padding: 2% 0 2% 0;
+  }
+  #hours_div img {
+    margin: 3% auto;
+    display: block;
+  }
+  #contact_div {
+    margin: auto;
+    background-color: BurlyWood;
+    padding: 2%;
+  }
+  
+  #address {
+    font-size: 1.3em;
+    font-weight: bold;
+  }
+  
+  #visit {
+    font-size: 1.5em;
+    font-style: italic;
+  }
+  
+  h3 {
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  p {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 1.2em;
+    color: Black;
+  }
+  
+  #family {
+    margin: 0 auto;
+    text-align: center;
+  }
+  #family img {
+    width: 336px;
+    height: 230px
+  }
+  
+  .social_media {
+    margin: 0 auto;
+    text-align: center;
+    background-color: BurlyWood;
+  }
+  
+  #fb, #twitter, #instagram {
+    margin: 0 0.5em;
+    width: 40px;
+    height: 40px;
+  }
+  
+  footer {
+    background-color: Salmon;
+    width: auto;
+    margin: auto;
+    padding: 1.5%;
+    text-align: center;
+  }
+  footer p {
+    font-style: italic;
+    font-weight: bold;
+  }
+  
+  .highlights {
+    font-family: 'Roboto';
+    color: Aqua;
+    text-shadow: 1px 1px Black;
+    font-weight: bold;
+  }
+  
+  .text {
+    font-family: Georgia serif; /*standard serif font for text*/
+    color: Black;
+  }
+  
+  #address p {
+    margin: 2%;
+  }
